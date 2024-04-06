@@ -44,8 +44,10 @@
             while (!juego2)
 
             {
-                Console.Write("Turno del jugador:" + turno);
-                Console.Write("Digite el numero : ");
+                Console.Write("\nDigite el numero del turno : ");
+                turno=Convert.ToInt32(Console.ReadLine());
+                Console.Write("\nTurno del jugador" + turno+ ":\n");
+                Console.Write("\nDigite el numero : ");
                 numing = Convert.ToInt32(Console.ReadLine());
 
                 // Condicionales para la validación
@@ -65,7 +67,14 @@
                     juego2=true;
                 }
 
-                
+                Console.Write("Desea jugar nuevamente  Si/No: Digite 1 para Si o 2 para no ");
+                int otravez= Convert.ToInt32(Console.ReadLine());
+                if(otravez ==1) jugar1 = true;
+
+                //Limpiazar la consola
+
+               
+
             }
 
 
