@@ -11,7 +11,7 @@
         {
             // Variables
 
-            decimal aporteMensualp1 = 0, aporteTotalp1 = 0, rendimientoTotalp1 = 0, bonoTotalp1 = 0, prestamoTotalp1 = 0, multasTotalp1 = 0, tasamensualp1, rendimientoMensualp1, bonomensualp1;
+            decimal aporteMensualp1 = 0, aporteTotalp1 = 0, rendimientoTotalp1 = 0, bonoTotalp1 = 0, prestamoTotalp1 = 0, multasTotalp1 = 0, tasamensualp1, rendimientoMensualp1, bonomensualp1 = 0, prestamop1 = 0;
             decimal aporteMensualp2 = 0, aporteTotalp2 = 0, rendimientoTotalp2 = 0, bonoTotalp2 = 0, prestamoTotalp2 = 0, multasTotalp2 = 0;
 
             //Clase random
@@ -40,6 +40,27 @@
                     bonoTotalp1 += bonomensualp1;
                     bonomensualp1 = 0;
                 }
+                // Prestamo
+
+                Console.Write("Socio 1  ¿Desea  un préstamo? (si/no): ");
+                string solicitudprestap1 = Console.ReadLine().ToLower();
+                if (solicitudprestap1 == "si")
+                {
+                    //Valor del préstamo.
+                    Console.Write("Socio 1  Ingrese el valor solicitado para el préstamo: ");
+                    decimal prestamop1 = Convert.ToDecimal(Console.ReadLine());
+                    if (prestamop1 <= aporteTotalp1)
+                    {
+                        //Verificar si el prestamo excede o no el monto ahorrado. 
+
+                        prestamoTotalp1 += prestamop1;
+                        Console.WriteLine("Préstamo aprobado para Socio 1");
+                    }
+                    else
+                    {
+                        Console.WriteLine("El préstamo solicitado excede el monto ahorrado por Socio 1.");
+                    }
+                }
 
                 aporteTotalp1 += aporteMensualp1;
                 rendimientoTotalp1 += rendimientoMensualp1;
@@ -55,5 +76,5 @@
         }
         }
     }
-}
+
 
