@@ -67,18 +67,23 @@
                     juego2=true;
                 }
 
-                Console.Write("Desea jugar nuevamente  Si/No: Digite 1 para Si o 2 para no ");
-                int otravez= Convert.ToInt32(Console.ReadLine());
-                if(otravez ==1) jugar1 = true;
 
-                //Limpiazar la consola
+
 
                
 
             }
 
+            Console.Write("Desea jugar nuevamente  Si/No: Digite 1 para Si o 2 para no ");
+            int otravez = Convert.ToInt32(Console.ReadLine());
+            if (otravez == 1) jugar1 = true;
+
+            //Limpiazar la consola
+
+            Console.Clear();
 
         }
+        Console.Write("Has finalizado el juego");
     }
 }
 
